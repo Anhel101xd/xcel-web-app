@@ -32,9 +32,9 @@ def submit():
 
     wb = load_workbook(TEMPLATE_PATH)
     ws = wb.active
-    ws["B3"] = dato1
-    ws["B4"] = dato2
-    ws["B5"] = dato3
+    ws["B3"] = float(dato1)
+    ws["B4"] = float(dato2)
+    ws["B5"] = float(dato3)
     wb.save(MODIFIED_PATH)
 
     upload_to_drive(MODIFIED_PATH)
