@@ -1,17 +1,90 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Modificar Excel</title>
+  <meta charset="UTF-8">
+  <title>Formulario Cielo Estrellado</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,255,255,0.3);
+      backdrop-filter: blur(5px);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      text-align: left;
+      font-weight: bold;
+      color: #a0e8ff;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0072ff, #00c6ff);
+    }
+  </style>
 </head>
 <body>
-    <h2>Ingresa los valores</h2>
+  <div class="content">
+    <h2>Formulario Bajo las Estrellas</h2>
     <form action="/submit" method="post">
-        <label>Dato 1 (B3): <input type="number" name="dato1" required></label><br>
-        <label>Dato 2 (B4): <input type="number" name="dato2" required></label><br>
-        <label>Dato 3 (B5): <input type="number" name="dato3" required></label><br>
+        <label for="dato1">Dato 1:</label>
+        <input type="number" name="dato1" id="dato1" required>
+
+        <label for="dato2">Dato 2:</label>
+        <input type="number" name="dato2" id="dato2" required>
+
+        <label for="dato3">Dato 3:</label>
+        <input type="number" name="dato3" id="dato3" required>
+
         <button type="submit">Enviar</button>
     </form>
+  </div>
 </body>
 </html>
